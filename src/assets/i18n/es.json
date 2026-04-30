@@ -1,0 +1,75 @@
+{
+  "HOME": {
+    "PLAYER_TOP_DEFAULT": "Jugador 2",
+    "PLAYER_BOTTOM_DEFAULT": "Jugador 1",
+    "ARIA_TOP_CLOCK": "Reloj jugador 2",
+    "ARIA_BOTTOM_CLOCK": "Reloj jugador 1",
+    "ARIA_CONTROLS": "Controles del reloj",
+    "ARIA_SETTINGS": "Configuración",
+    "ARIA_PAUSE_CLOCK": "Pausar reloj",
+    "ARIA_RESUME_CLOCK": "Reanudar reloj",
+    "ARIA_RESET_CLOCK": "Restablecer reloj",
+    "ARIA_THEME": "Personalización"
+  },
+  "THEME": {
+    "TITLE": "Tema",
+    "RESET": "Restablecer",
+    "PLAYER1": "Jugador 1",
+    "PLAYER2": "Jugador 2",
+    "PLAYER1_PLACEHOLDER": "Jugador 1",
+    "PLAYER2_PLACEHOLDER": "Jugador 2",
+    "ARIA_PLAYER1_COLOR": "Color jugador 1",
+    "ARIA_PLAYER2_COLOR": "Color jugador 2",
+    "RESET_ALERT": {
+      "HEADER": "Restablecer tema",
+      "MESSAGE": "Se perderán todas las personalizaciones. ¿Continuar?",
+      "CANCEL": "Cancelar",
+      "CONFIRM": "Restablecer"
+    },
+    "LANGUAGE": {
+      "LABEL": "Idioma",
+      "ES": "Español",
+      "EN": "English",
+      "GL": "Galego"
+    },
+    "CLICK_SOUND": {
+      "LABEL": "Sonido de clic",
+      "DESCRIPTION": "Reproducir clic al pulsar un reloj"
+    },
+    "ALARM_SOUND": {
+      "LABEL": "Sonido de alarma",
+      "DESCRIPTION": "Reproducir sonido de alarma cuando se agota el tiempo"
+    }
+  },
+  "SETTINGS": {
+    "TITLE": "Configuración",
+    "CURRENT": {
+      "TITLE": "Ajustes actuales",
+      "BASE_TIME": "Tiempo base (minutos)",
+      "INCREMENT_TYPE": "Tipo de incremento / Límite por turno",
+      "INCREMENT_SECONDS": "Incremento por turno (segundos)",
+      "TURN_LIMIT_SECONDS": "Límite por turno (segundos)"
+    },
+    "INCREMENT": {
+      "NONE": "Sin incremento",
+      "FISCHER": "Incremento Fischer",
+      "BRONSTEIN": "Incremento Bronstein",
+      "TURN_LIMIT": "Límite por turno"
+    },
+    "MODES": {
+      "TITLE": "Modos guardados",
+      "EMPTY": "Aún no hay modos guardados.",
+      "NEW_MODE_TITLE": "Guardar modo",
+      "NEW_MODE_PLACEHOLDER": "Nombre del modo",
+      "DELETE_MODE_TITLE": "Eliminar modo",
+      "DELETE_MODE_MESSAGE": "Este modo se eliminará de forma permanente."
+    },
+    "BUTTONS": {
+      "RESET": "Restablecer",
+      "NEW_MODE": "Nuevo modo",
+      "DELETE": "Eliminar",
+      "SAVE": "Guardar",
+      "CANCEL": "Cancelar"
+    }
+  }
+}

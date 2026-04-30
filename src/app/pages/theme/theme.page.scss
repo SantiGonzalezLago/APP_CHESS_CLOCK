@@ -1,0 +1,114 @@
+.players-panels {
+  padding: 16px;
+  display: grid;
+  gap: 14px;
+}
+
+.player-panel {
+  background: var(--ion-item-background, #fff);
+  border: 1px solid var(--ion-border-color, rgba(0, 0, 0, 0.1));
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.player-panel h2 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.panel-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.name-input {
+  flex: 1;
+}
+
+.color-input {
+  width: 52px;
+  height: 34px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.settings-section {
+  padding: 8px 16px;
+  display: grid;
+  gap: 10px;
+}
+
+.menu-badge {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: var(--ion-item-background, #fff);
+  border: 1px solid var(--ion-border-color, rgba(0, 0, 0, 0.1));
+  border-radius: 12px;
+  padding: 12px;
+  cursor: pointer;
+  text-align: left;
+  color: var(--ion-text-color);
+}
+
+.menu-badge-static {
+  cursor: default;
+}
+
+.menu-badge-main {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.menu-badge-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  font-size: 1.2rem;
+}
+
+.menu-badge-avatar-action {
+  background: var(--ion-color-primary, #3880ff);
+  color: #fff;
+}
+
+.menu-badge-flag {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.menu-badge-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.menu-badge-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.menu-badge-value {
+  font-size: 0.8rem;
+  color: var(--ion-color-medium);
+  line-height: 1.2;
+}
+
+.menu-badge-chevron {
+  font-size: 1rem;
+  color: var(--ion-color-medium);
+  flex-shrink: 0;
+}

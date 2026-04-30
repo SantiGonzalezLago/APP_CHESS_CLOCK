@@ -1,0 +1,75 @@
+{
+  "HOME": {
+    "PLAYER_TOP_DEFAULT": "Xogador 2",
+    "PLAYER_BOTTOM_DEFAULT": "Xogador 1",
+    "ARIA_TOP_CLOCK": "Reloxo xogador 2",
+    "ARIA_BOTTOM_CLOCK": "Reloxo xogador 1",
+    "ARIA_CONTROLS": "Controis do reloxo",
+    "ARIA_SETTINGS": "Configuración",
+    "ARIA_PAUSE_CLOCK": "Pausar reloxo",
+    "ARIA_RESUME_CLOCK": "Reanudar reloxo",
+    "ARIA_RESET_CLOCK": "Restablecer reloxo",
+    "ARIA_THEME": "Personalización"
+  },
+  "THEME": {
+    "TITLE": "Tema",
+    "RESET": "Restablecer",
+    "PLAYER1": "Xogador 1",
+    "PLAYER2": "Xogador 2",
+    "PLAYER1_PLACEHOLDER": "Xogador 1",
+    "PLAYER2_PLACEHOLDER": "Xogador 2",
+    "ARIA_PLAYER1_COLOR": "Cor xogador 1",
+    "ARIA_PLAYER2_COLOR": "Cor xogador 2",
+    "RESET_ALERT": {
+      "HEADER": "Restablecer tema",
+      "MESSAGE": "Perderanse todas as personalizacións. Continuar?",
+      "CANCEL": "Cancelar",
+      "CONFIRM": "Restablecer"
+    },
+    "LANGUAGE": {
+      "LABEL": "Idioma",
+      "ES": "Español",
+      "EN": "English",
+      "GL": "Galego"
+    },
+    "CLICK_SOUND": {
+      "LABEL": "Son de clic",
+      "DESCRIPTION": "Reproducir clic ao pulsar un reloxo"
+    },
+    "ALARM_SOUND": {
+      "LABEL": "Son de alarma",
+      "DESCRIPTION": "Reproducir son de alarma cando se esgota o tempo"
+    }
+  },
+  "SETTINGS": {
+    "TITLE": "Configuración",
+    "CURRENT": {
+      "TITLE": "Axustes actuais",
+      "BASE_TIME": "Tempo base (minutos)",
+      "INCREMENT_TYPE": "Tipo de incremento / Límite por quenda",
+      "INCREMENT_SECONDS": "Incremento por quenda (segundos)",
+      "TURN_LIMIT_SECONDS": "Límite por quenda (segundos)"
+    },
+    "INCREMENT": {
+      "NONE": "Sen incremento",
+      "FISCHER": "Incremento Fischer",
+      "BRONSTEIN": "Incremento Bronstein",
+      "TURN_LIMIT": "Límite por quenda"
+    },
+    "MODES": {
+      "TITLE": "Modos gardados",
+      "EMPTY": "Aínda non hai modos gardados.",
+      "NEW_MODE_TITLE": "Gardar modo",
+      "NEW_MODE_PLACEHOLDER": "Nome do modo",
+      "DELETE_MODE_TITLE": "Eliminar modo",
+      "DELETE_MODE_MESSAGE": "Este modo eliminarase de forma permanente."
+    },
+    "BUTTONS": {
+      "RESET": "Restablecer",
+      "NEW_MODE": "Novo modo",
+      "DELETE": "Eliminar",
+      "SAVE": "Gardar",
+      "CANCEL": "Cancelar"
+    }
+  }
+}

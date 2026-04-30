@@ -1,8 +1,8 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'chess-clock',
+  appId: 'com.santigl.chessclock',
+  appName: 'Chess Clock',
   webDir: 'www'
 };
 

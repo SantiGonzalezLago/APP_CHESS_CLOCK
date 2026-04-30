@@ -1,0 +1,75 @@
+{
+  "HOME": {
+    "PLAYER_TOP_DEFAULT": "Player 2",
+    "PLAYER_BOTTOM_DEFAULT": "Player 1",
+    "ARIA_TOP_CLOCK": "Player 2 clock",
+    "ARIA_BOTTOM_CLOCK": "Player 1 clock",
+    "ARIA_CONTROLS": "Clock controls",
+    "ARIA_SETTINGS": "Settings",
+    "ARIA_PAUSE_CLOCK": "Pause clock",
+    "ARIA_RESUME_CLOCK": "Resume clock",
+    "ARIA_RESET_CLOCK": "Reset clock",
+    "ARIA_THEME": "Customization"
+  },
+  "THEME": {
+    "TITLE": "Theme",
+    "RESET": "Reset",
+    "PLAYER1": "Player 1",
+    "PLAYER2": "Player 2",
+    "PLAYER1_PLACEHOLDER": "Player 1",
+    "PLAYER2_PLACEHOLDER": "Player 2",
+    "ARIA_PLAYER1_COLOR": "Player 1 color",
+    "ARIA_PLAYER2_COLOR": "Player 2 color",
+    "RESET_ALERT": {
+      "HEADER": "Reset theme",
+      "MESSAGE": "All customizations will be lost. Continue?",
+      "CANCEL": "Cancel",
+      "CONFIRM": "Reset"
+    },
+    "LANGUAGE": {
+      "LABEL": "Language",
+      "ES": "Español",
+      "EN": "English",
+      "GL": "Galego"
+    },
+    "CLICK_SOUND": {
+      "LABEL": "Click sound",
+      "DESCRIPTION": "Play click when tapping a clock"
+    },
+    "ALARM_SOUND": {
+      "LABEL": "Alarm sound",
+      "DESCRIPTION": "Play alarm sound when time runs out"
+    }
+  },
+  "SETTINGS": {
+    "TITLE": "Settings",
+    "CURRENT": {
+      "TITLE": "Current settings",
+      "BASE_TIME": "Base time (minutes)",
+      "INCREMENT_TYPE": "Increment type / Turn limit",
+      "INCREMENT_SECONDS": "Increment per turn (seconds)",
+      "TURN_LIMIT_SECONDS": "Turn limit (seconds)"
+    },
+    "INCREMENT": {
+      "NONE": "No increment",
+      "FISCHER": "Fischer increment",
+      "BRONSTEIN": "Bronstein increment",
+      "TURN_LIMIT": "Turn limit"
+    },
+    "MODES": {
+      "TITLE": "Saved modes",
+      "EMPTY": "No saved modes yet.",
+      "NEW_MODE_TITLE": "Save mode",
+      "NEW_MODE_PLACEHOLDER": "Mode name",
+      "DELETE_MODE_TITLE": "Delete mode",
+      "DELETE_MODE_MESSAGE": "This mode will be permanently deleted."
+    },
+    "BUTTONS": {
+      "RESET": "Reset",
+      "NEW_MODE": "New mode",
+      "DELETE": "Delete",
+      "SAVE": "Save",
+      "CANCEL": "Cancel"
+    }
+  }
+}

@@ -21,6 +21,7 @@ log.txt
 /.ionic
 /www
 /platforms
+/android
 /plugins
 
 # Compiled output
@@ -68,3 +69,5 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+chess-clock.keystore

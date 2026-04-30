@@ -1,0 +1,65 @@
+<ion-content [fullscreen]="true">
+  <div class="clock-screen">
+    <button
+      class="clock-half top-half"
+      [class.clock-half-timeout-alert]="topTotalTimeoutAlert"
+      type="button"
+      [attr.aria-label]="'HOME.ARIA_TOP_CLOCK' | translate"
+      [style.background-color]="config.topPanelColor"
+      [style.color]="config.topTextColor"
+      (click)="onClockTap('top')"
+    >
+      <span class="player-label">{{ topDisplayName }}</span>
+      <span class="clock-time" [class.clock-time-breathing]="topIsActive">{{ topTime }}</span>
+      @if (showTurnClock) {
+        <span class="turn-time">{{ topTurnTime }}</span>
+      }
+    </button>
+
+    <div
+      class="middle-strip"
+      [class.middle-strip-alert-total]="isTotalTimeoutAlert"
+      [class.middle-strip-alert-turn]="isTurnLimitAlert"
+      [attr.aria-label]="'HOME.ARIA_CONTROLS' | translate"
+      (click)="onMiddleStripTap($event)"
+    >
+      @if (isClockRunning) {
+        <ion-icon class="pause-control-icon" name="pause-outline" [attr.aria-label]="'HOME.ARIA_PAUSE_CLOCK' | translate"></ion-icon>
+      } @else if (isManualPauseActive) {
+        <ion-button class="control-button play-control-button" fill="clear" [attr.aria-label]="'HOME.ARIA_RESUME_CLOCK' | translate" (click)="resumeFromPlayButton($event)">
+          <ion-icon name="play-outline"></ion-icon>
+        </ion-button>
+        <ion-button class="control-button" fill="clear" [attr.aria-label]="'HOME.ARIA_RESET_CLOCK' | translate" (click)="resetClockFromSettings()">
+          <ion-icon name="refresh-outline"></ion-icon>
+        </ion-button>
+      } @else if (hasGameStarted) {
+        <ion-button class="control-button" fill="clear" [attr.aria-label]="'HOME.ARIA_RESET_CLOCK' | translate" (click)="resetClockFromSettings()">
+          <ion-icon name="refresh-outline"></ion-icon>
+        </ion-button>
+      } @else {
+        <ion-button class="control-button" fill="clear" [attr.aria-label]="'HOME.ARIA_SETTINGS' | translate" (click)="openSettings()">
+          <ion-icon name="settings-outline"></ion-icon>
+        </ion-button>
+        <ion-button class="control-button" fill="clear" [attr.aria-label]="'HOME.ARIA_THEME' | translate" (click)="openTheme()">
+          <ion-icon name="brush-outline"></ion-icon>
+        </ion-button>
+      }
+    </div>
+
+    <button
+      class="clock-half bottom-half"
+      [class.clock-half-timeout-alert]="bottomTotalTimeoutAlert"
+      type="button"
+      [attr.aria-label]="'HOME.ARIA_BOTTOM_CLOCK' | translate"
+      [style.background-color]="config.bottomPanelColor"
+      [style.color]="config.bottomTextColor"
+      (click)="onClockTap('bottom')"
+    >
+      <span class="player-label">{{ bottomDisplayName }}</span>
+      <span class="clock-time" [class.clock-time-breathing]="bottomIsActive">{{ bottomTime }}</span>
+      @if (showTurnClock) {
+        <span class="turn-time">{{ bottomTurnTime }}</span>
+      }
+    </button>
+  </div>
+</ion-content>

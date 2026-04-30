@@ -1,0 +1,101 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ 'THEME.TITLE' | translate }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button size="small" fill="clear" (click)="resetDefaults()">{{ 'THEME.RESET' | translate }}</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="players-panels">
+    <section class="player-panel">
+      <h2>{{ 'THEME.PLAYER1' | translate }}</h2>
+      <div class="panel-row">
+        <ion-input
+          class="name-input"
+          [placeholder]="'THEME.PLAYER1_PLACEHOLDER' | translate"
+          [attr.aria-label]="'THEME.PLAYER1' | translate"
+          [value]="config.bottomPlayerName"
+          (ionInput)="onBottomNameChange($event)"
+        ></ion-input>
+        <input
+          class="color-input"
+          type="color"
+          [attr.aria-label]="'THEME.ARIA_PLAYER1_COLOR' | translate"
+          [value]="config.bottomPanelColor"
+          (input)="onBottomColorChange($event)"
+        />
+      </div>
+    </section>
+
+    <section class="player-panel">
+      <h2>{{ 'THEME.PLAYER2' | translate }}</h2>
+      <div class="panel-row">
+        <ion-input
+          class="name-input"
+          [placeholder]="'THEME.PLAYER2_PLACEHOLDER' | translate"
+          [attr.aria-label]="'THEME.PLAYER2' | translate"
+          [value]="config.topPlayerName"
+          (ionInput)="onTopNameChange($event)"
+        ></ion-input>
+        <input
+          class="color-input"
+          type="color"
+          [attr.aria-label]="'THEME.ARIA_PLAYER2_COLOR' | translate"
+          [value]="config.topPanelColor"
+          (input)="onTopColorChange($event)"
+        />
+      </div>
+    </section>
+  </div>
+
+  <div class="settings-section">
+    <button
+      type="button"
+      role="listitem"
+      class="menu-badge"
+      (click)="openLanguageSelector()"
+    >
+      <span class="menu-badge-main">
+        <span class="menu-badge-avatar menu-badge-avatar-action" aria-hidden="true">
+          <ion-icon name="globe-outline"></ion-icon>
+        </span>
+        <span class="menu-badge-info">
+          <span class="menu-badge-name">{{ 'THEME.LANGUAGE.LABEL' | translate }}</span>
+          <span class="menu-badge-value">{{ currentLangLabel() }}</span>
+        </span>
+      </span>
+      <ion-icon class="menu-badge-chevron" name="chevron-forward-outline" aria-hidden="true"></ion-icon>
+    </button>
+
+    <div class="menu-badge menu-badge-static" role="group">
+      <span class="menu-badge-main">
+        <span class="menu-badge-avatar menu-badge-avatar-action" aria-hidden="true">
+          <ion-icon name="volume-medium-outline"></ion-icon>
+        </span>
+        <span class="menu-badge-info">
+          <span class="menu-badge-name">{{ 'THEME.CLICK_SOUND.LABEL' | translate }}</span>
+          <span class="menu-badge-value">{{ 'THEME.CLICK_SOUND.DESCRIPTION' | translate }}</span>
+        </span>
+      </span>
+      <ion-toggle [checked]="config.clickSoundEnabled" (ionChange)="onClickSoundToggle($event)"></ion-toggle>
+    </div>
+
+    <div class="menu-badge menu-badge-static" role="group">
+      <span class="menu-badge-main">
+        <span class="menu-badge-avatar menu-badge-avatar-action" aria-hidden="true">
+          <ion-icon name="notifications-outline"></ion-icon>
+        </span>
+        <span class="menu-badge-info">
+          <span class="menu-badge-name">{{ 'THEME.ALARM_SOUND.LABEL' | translate }}</span>
+          <span class="menu-badge-value">{{ 'THEME.ALARM_SOUND.DESCRIPTION' | translate }}</span>
+        </span>
+      </span>
+      <ion-toggle [checked]="config.alarmSoundEnabled" (ionChange)="onAlarmSoundToggle($event)"></ion-toggle>
+    </div>
+  </div>
+</ion-content>

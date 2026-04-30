@@ -1,0 +1,97 @@
+.settings-wrapper {
+  padding: 16px;
+  display: grid;
+  gap: 14px;
+}
+
+.settings-card {
+  background: var(--ion-item-background, #fff);
+  border: 1px solid var(--ion-border-color, rgba(0, 0, 0, 0.1));
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.settings-card h2 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.card-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.card-header-row h2 {
+  margin: 0;
+}
+
+.new-mode-button {
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--ion-color-primary, #3880ff);
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.empty-text {
+  margin: 4px 0 0;
+  color: var(--ion-color-medium);
+}
+
+.preset-list {
+  display: grid;
+  gap: 0;
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+.mode-sliding {
+  border-top: 1px solid var(--ion-border-color, rgba(0, 0, 0, 0.08));
+  border-bottom: 1px solid var(--ion-border-color, rgba(0, 0, 0, 0.08));
+  border-left: 0;
+  border-right: 0;
+  overflow: hidden;
+  background: var(--ion-item-background, #fff);
+}
+
+.mode-item {
+  --background: var(--ion-item-background, #fff);
+  --padding-start: 14px;
+  --padding-end: 6px;
+  --inner-padding-end: 8px;
+  --min-height: 60px;
+}
+
+.preset-item-main {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+  padding: 8px 0;
+}
+
+.preset-item-main strong {
+  font-size: 0.97rem;
+  font-weight: 600;
+}
+
+.preset-item-main ion-note {
+  font-size: 0.82rem;
+  color: var(--ion-color-medium);
+}
+
+.mode-delete-option {
+  --padding-start: 16px;
+  --padding-end: 16px;
+  font-weight: 600;
+}

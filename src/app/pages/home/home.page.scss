@@ -1,0 +1,232 @@
+:host {
+  --board-green: #1d4d45;
+  --board-green-dark: #143831;
+  --board-beige: #e7d7b8;
+  --strip-bg: #212121;
+  --strip-border: rgba(255, 255, 255, 0.12);
+  --text-light: #f4f3ef;
+  --text-dark: #15231f;
+}
+
+ion-content {
+  --background: radial-gradient(circle at top, #244f46 0%, #112924 65%, #0a1915 100%);
+}
+
+.clock-screen {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.clock-half {
+  border: 0;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.clock-half-timeout-alert::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background:
+    linear-gradient(140deg, rgba(255, 130, 130, 0.36), transparent 55%),
+    #8a1616;
+  animation: panel-timeout-blink-alt 0.48s steps(1, end) infinite;
+}
+
+.clock-half-timeout-alert > * {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes panel-timeout-blink-alt {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.top-half {
+  background:
+    linear-gradient(140deg, rgba(255, 255, 255, 0.1), transparent 55%),
+    var(--board-beige);
+  color: var(--text-dark);
+  transform: rotate(180deg);
+}
+
+.bottom-half {
+  background:
+    linear-gradient(40deg, rgba(255, 255, 255, 0.1), transparent 55%),
+    var(--board-green);
+  color: var(--text-light);
+}
+
+.player-label {
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+.clock-time {
+  font-size: clamp(3rem, 12vw, 6.4rem);
+  line-height: 1;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  display: inline-block;
+}
+
+.clock-time-breathing {
+  animation: breathing-clock 1.8s ease-in-out infinite;
+}
+
+@keyframes breathing-clock {
+  0% {
+    opacity: 0.76;
+    transform: scale(0.95);
+    filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 16px rgba(255, 255, 255, 0.22));
+  }
+
+  100% {
+    opacity: 0.76;
+    transform: scale(0.95);
+    filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+  }
+}
+
+.turn-time {
+  font-size: clamp(1.05rem, 3.8vw, 1.55rem);
+  line-height: 1;
+  font-weight: 700;
+  opacity: 0.85;
+  font-variant-numeric: tabular-nums;
+}
+
+.middle-strip {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: var(--strip-bg);
+  border-top: 1px solid var(--strip-border);
+  border-bottom: 1px solid var(--strip-border);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.middle-strip-alert-turn {
+  animation: strip-alert-blink-turn 0.48s steps(1, end) infinite;
+}
+
+@keyframes strip-alert-blink-turn {
+  0% {
+    background: #7a1212;
+  }
+
+  50% {
+    background: var(--strip-bg);
+  }
+
+  100% {
+    background: #7a1212;
+  }
+}
+
+.middle-strip-alert-total {
+  animation: strip-alert-blink-total 0.48s steps(1, end) infinite;
+}
+
+@keyframes strip-alert-blink-total {
+  0% {
+    background: var(--strip-bg);
+  }
+
+  50% {
+    background: #7a1212;
+  }
+
+  100% {
+    background: var(--strip-bg);
+  }
+}
+
+.middle-strip ion-button {
+  --color: #f2efe8;
+  --padding-start: 8px;
+  --padding-end: 8px;
+}
+
+.middle-strip ion-icon {
+  font-size: 1.45rem;
+}
+
+.pause-control-icon {
+  color: #f2efe8;
+  font-size: 1.8rem;
+}
+
+.play-control-button ion-icon {
+  font-size: 1.8rem;
+}
+
+.control-button {
+  --padding-start: 10px;
+  --padding-end: 10px;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.control-button::part(native) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.control-button span {
+  white-space: nowrap;
+}
+
+@media (max-width: 380px) {
+  .middle-strip {
+    min-height: 68px;
+  }
+
+  .control-button {
+    font-size: 0.72rem;
+  }
+
+  .clock-half {
+    gap: 8px;
+    padding: 14px;
+  }
+}

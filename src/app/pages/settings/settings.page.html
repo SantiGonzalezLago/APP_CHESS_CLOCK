@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ 'SETTINGS.TITLE' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="settings-wrapper">
+    <section class="settings-card">
+      <h2>{{ 'SETTINGS.CURRENT.TITLE' | translate }}</h2>
+
+      <ion-list lines="none">
+        <ion-item>
+          <ion-label position="stacked">{{ 'SETTINGS.CURRENT.BASE_TIME' | translate }}</ion-label>
+          <ion-input
+            type="number"
+            inputmode="numeric"
+            min="0"
+            [value]="currentSettings().baseMinutes"
+            (ionInput)="onBaseMinutesChange($event)"
+          ></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">{{ 'SETTINGS.CURRENT.INCREMENT_TYPE' | translate }}</ion-label>
+          <ion-select [value]="currentSettings().incrementType" interface="action-sheet" (ionChange)="onIncrementTypeChange($event)">
+            <ion-select-option value="none">{{ 'SETTINGS.INCREMENT.NONE' | translate }}</ion-select-option>
+            <ion-select-option value="fischer">{{ 'SETTINGS.INCREMENT.FISCHER' | translate }}</ion-select-option>
+            <ion-select-option value="bronstein">{{ 'SETTINGS.INCREMENT.BRONSTEIN' | translate }}</ion-select-option>
+            <ion-select-option value="turn-limit">{{ 'SETTINGS.INCREMENT.TURN_LIMIT' | translate }}</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        @if (hasIncrement) {
+          <ion-item>
+            <ion-label position="stacked">{{ incrementValueLabelKey | translate }}</ion-label>
+            <ion-input
+              type="number"
+              inputmode="numeric"
+              min="0"
+              [value]="currentSettings().incrementSeconds"
+              (ionInput)="onIncrementSecondsChange($event)"
+            ></ion-input>
+          </ion-item>
+        }
+
+      </ion-list>
+    </section>
+
+    <section class="settings-card">
+      <div class="card-header-row">
+        <h2>{{ 'SETTINGS.MODES.TITLE' | translate }}</h2>
+        <button class="new-mode-button" type="button" [attr.aria-label]="'SETTINGS.BUTTONS.NEW_MODE' | translate" (click)="saveCurrentAsMode()">+</button>
+      </div>
+
+      @if (modes().length === 0) {
+        <p class="empty-text">{{ 'SETTINGS.MODES.EMPTY' | translate }}</p>
+      }
+
+      @if (modes().length > 0) {
+        <div class="preset-list">
+          @for (mode of modes(); track mode.id) {
+            <ion-item-sliding class="mode-sliding">
+              <ion-item class="mode-item" button detail="true" (click)="applyMode(mode.id)">
+                <div class="preset-item-main">
+                  <strong>{{ mode.name }}</strong>
+                  <ion-note>
+                    {{ mode.baseMinutes }}m · {{ incrementTypeLabel(mode.incrementType) }}
+                    @if (mode.incrementType !== 'none') {
+                      <span> ({{ mode.incrementSeconds }}s)</span>
+                    }
+                  </ion-note>
+                </div>
+              </ion-item>
+              <ion-item-options side="end">
+                <ion-item-option class="mode-delete-option" color="danger" (click)="deleteMode(mode.id)">{{ 'SETTINGS.BUTTONS.DELETE' | translate }}</ion-item-option>
+              </ion-item-options>
+            </ion-item-sliding>
+          }
+        </div>
+      }
+    </section>
+  </div>
+</ion-content>
