@@ -464,6 +464,10 @@ export class HomePage implements OnDestroy {
     }
 
     const now = context.currentTime;
+    const beepDurationSeconds = 0.08;
+    const alertDurationSeconds = 2;
+    const beepCount = Math.ceil(alertDurationSeconds / beepDurationSeconds);
+
     const beep = (startAt: number, frequency: number) => {
       const oscillator = context.createOscillator();
       const gain = context.createGain();
@@ -474,16 +478,16 @@ export class HomePage implements OnDestroy {
 
       gain.gain.setValueAtTime(0.001, startAt);
       gain.gain.exponentialRampToValueAtTime(0.12, startAt + 0.003);
-      gain.gain.exponentialRampToValueAtTime(0.001, startAt + 0.075);
+      gain.gain.exponentialRampToValueAtTime(0.001, startAt + (beepDurationSeconds - 0.005));
 
       oscillator.connect(gain);
       gain.connect(context.destination);
       oscillator.start(startAt);
-      oscillator.stop(startAt + 0.08);
+      oscillator.stop(startAt + beepDurationSeconds);
     };
 
-    for (let i = 0; i < 40; i += 1) {
-      const startAt = now + i * 0.08;
+    for (let i = 0; i < beepCount; i += 1) {
+      const startAt = now + i * beepDurationSeconds;
       const frequency = i % 2 === 0 ? 2400 : 2100;
       beep(startAt, frequency);
     }
