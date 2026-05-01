@@ -1,6 +1,8 @@
 .settings-wrapper {
   padding: 16px;
-  display: grid;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
   gap: 14px;
 }
 
@@ -94,4 +96,10 @@
   --padding-start: 16px;
   --padding-end: 16px;
   font-weight: 600;
+}
+
+.settings-wrapper app-kofi-support-card {
+  display: block;
+  margin-top: auto;
+  padding-top: 12px;
 }

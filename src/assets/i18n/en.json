@@ -71,5 +71,8 @@
       "SAVE": "Save",
       "CANCEL": "Cancel"
     }
+  },
+  "KOFI": {
+    "TITLE": "Support me on Ko-fi!"
   }
 }

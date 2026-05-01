@@ -20,6 +20,7 @@ import {
 } from '@ionic/angular/standalone';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SettingsService } from '../../services/settings.service';
+import { KofiSupportCardComponent } from '../../components/kofi-support-card/kofi-support-card.component';
 
 @Component({
   selector: 'app-settings',
@@ -43,6 +44,7 @@ import { SettingsService } from '../../services/settings.service';
     IonSelectOption,
     IonNote,
     TranslateModule,
+    KofiSupportCardComponent,
   ],
 })
 export class SettingsPage {

@@ -17,6 +17,7 @@ import { chevronForwardOutline, globeOutline, notificationsOutline, volumeMedium
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { LanguageService } from '../../services/language.service';
 import { ThemeService } from '../../services/theme.service';
+import { KofiSupportCardComponent } from '../../components/kofi-support-card/kofi-support-card.component';
 
 @Component({
   selector: 'app-theme',
@@ -34,6 +35,7 @@ import { ThemeService } from '../../services/theme.service';
     IonToggle,
     IonIcon,
     TranslateModule,
+    KofiSupportCardComponent,
   ],
 })
 export class ThemePage {
